@@ -9,18 +9,20 @@ int main()
     HybridCar toyota(new PetrolEngine(80, 1400, 5), new ElectricEngine(100, 540));
 
     Car* car = &opel;
-    car->accelerate(50);
+
     car->brake();
     car->refill();
-    //opel.refuel();
+    car->accelerate(50);
+    std::cout<<std::endl;
 
     car = &nissan;
     car->refill();
     car->accelerate(80);
     car->turnLeft();
+    std::cout<<std::endl;
 
     toyota.accelerate(100);
     toyota.ElectricCar::brake();
-    //toyota.charge();
-    //toyota.refuel();
+    std::cout<<std::endl;
+
 }

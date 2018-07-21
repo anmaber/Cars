@@ -5,16 +5,11 @@
 class ElectricCar : public Car
 {
 public:
-    ElectricCar(ElectricEngine* engine)
-        : engine_(engine)
-    {}
+    ElectricCar(ElectricEngine* engine);
     ~ElectricCar() {}
-    void refill()
-    {
-        charge();
-    }
+    void refill();
 private:
-    void charge() {}
+    void charge();
     ElectricEngine* engine_;
 };
 

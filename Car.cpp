@@ -1,5 +1,8 @@
-#include <iostream>
 #include "Car.hpp"
+
+InvalidAccelaretion:: InvalidAccelaretion()
+:invalid_argument("speed cannot be below 0")
+   {}
 
 void Car::turnLeft()
 {
@@ -18,5 +21,10 @@ void Car::brake()
 
 void Car::accelerate(int speed)
 {
+   if(speed<0)
+   {
+      throw InvalidAccelaretion();
+   }
+
     std::cout << __FUNCTION__ << "(" << speed << ")" << std::endl;
 }

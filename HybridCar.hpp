@@ -6,14 +6,9 @@
 class HybridCar : virtual public PetrolCar, virtual public ElectricCar
 {
 public:
-    HybridCar(PetrolEngine* petrolEng, ElectricEngine* electricEng)
-        : PetrolCar(petrolEng)
-        , ElectricCar(electricEng)
-    {}
+    HybridCar(PetrolEngine* petrolEng, ElectricEngine* electricEng);
     ~HybridCar() {}
-    void accelerate(int speed) {
-        PetrolCar::accelerate(speed);
-    }
-    void refill() {}
+    void accelerate(int speed);
+    void refill();
 };
 

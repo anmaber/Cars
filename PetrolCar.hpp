@@ -4,17 +4,12 @@
 
 class PetrolCar : public Car
 {
-public:
-    PetrolCar(PetrolEngine* engine) 
-        : engine_(engine)
-    {}
-    ~PetrolCar() {}
-    void refill()
-    {
-        refuel();
-    }
-private:
-    void refuel() {}
+    void refuel();
     PetrolEngine* engine_;
+public:
+    PetrolCar(PetrolEngine* engine);
+    ~PetrolCar() {}
+    void refill();
+
 };
 

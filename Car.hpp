@@ -1,5 +1,13 @@
 #pragma once
 
+#include <stdexcept>
+#include <iostream>
+
+class InvalidAccelaretion : public std::invalid_argument
+{
+public:
+    InvalidAccelaretion();
+};
 class Car
 {
 public:
@@ -9,5 +17,6 @@ public:
     virtual void accelerate(int speed);
     virtual void refill() = 0;
     virtual ~Car() {}
+
 };
 
